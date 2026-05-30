@@ -16,6 +16,12 @@ Mon_Index:	dc.w Mon_Main-Mon_Index
 ; ===========================================================================
 
 Mon_Main:	; Routine 0
+		; SBZ2 Bugfix by Selbi
+		cmpi.b	#8,obSubtype(a0)		; is monitor subtype valid? i.e. no higher than goggles monitor (ID 8)
+		bls.s	.valid				; if yes, branch
+		move.b	#id_Invisibarrier,obID(a0)	; otherwise, convert this monitor to an invisible solid barrier
+		jmp	(Invisibarrier).l		; execute barrier logic
+.valid:
 		addq.b	#2,obRoutine(a0)
 		move.b	#$E,obHeight(a0)
 		move.b	#$E,obWidth(a0)
