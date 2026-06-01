@@ -1,3 +1,9 @@
+WARNING
+============
+This disassembly is extremely outdated as of June 1, 2026. I may try to clean it up a bit, but no promises. There is also a lot of things I would do differently these days. Please be cautious while referencing this disassembly.
+
+The rest of this README file is unmodified from late 2024.
+
 Superstars Amy Rose in Sonic the Hedgehog
 ============
 
